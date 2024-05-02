@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useCart, useCreateLineItem } from 'medusa-react';
 import { formatVariantPrice, useProducts, useRegions } from "medusa-react";
+import { StoreContext } from '../context/StoreContext'; // Importer StoreContext
 
 import Products from '../Products/ProductCollection';
 
 const Cart = ({ product, variant }) => {
     const { cart, createCart } = useCart();
     const { cart: cart2, setCart } = useCart();
-   
+    const { cart: contextCart, setCart: setContextCart } = useContext(StoreContext); // Brug StoreContext
 
     const createLineItem = useCreateLineItem(cart.id && cart2.id);
 
@@ -17,16 +18,24 @@ const Cart = ({ product, variant }) => {
     }, []);
 
     const handleCreateCart = () => {
-        createCart.mutate(
-            {}, 
-            {
-                onSuccess: ({ cart }) => {
-                    localStorage.setItem("cart_id", cart.id);
-
-                },
-            }
-        );
+        // Kontroller om der allerede er en vogn
+        if (!cart.id && !contextCart) {
+            createCart.mutate(
+                {}, 
+                {
+                    onSuccess: ({ cart }) => {
+                        console.log('Ny vogn oprettet!');
+                        localStorage.setItem("cart_id", cart.id);
+                        // Gem kurvtilstanden i contextCart
+                        setContextCart(cart);
+                    },
+                }
+            );
+        } else {
+            console.log('Vogn eksisterer allerede!');
+        }
     }
+    
 
     const handleAddItem = (variants, quantity) => {
         const variant_id = variants.id;
@@ -40,20 +49,20 @@ const Cart = ({ product, variant }) => {
                     console.log(`Added ${quantity} of ${product.title} to cart`);
                     console.log(cart.items);
                     // Opdater kurvtilstanden ved kun at tilføje det nye element i stedet for at gemme hele kurven igen
-                    setCart (cart);
+                    setCart(cart);
+                    // Opdater contextCart
+                    setContextCart(cart);
                 }
             }
         );
     }
-    
 
-
-      return (
+    return (
         <div>
-          <h3>Cart</h3>
-          <button onClick={()=> handleAddItem(product.variants[0],1)}>Add to cart</button>
+            <h3>Cart</h3>
+            <button onClick={()=> handleAddItem(product.variants[0],1)}>Add to cart</button>
         </div>
-      );
-    };
+    );
+};
 
 export default Cart;
