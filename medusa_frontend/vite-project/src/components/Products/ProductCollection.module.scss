@@ -1,0 +1,17 @@
+.products{
+width: 100vw;
+}
+
+ul img{
+    width: 100%;
+    object-fit: cover;
+    height: 30%;
+    display: block;
+    margin: auto;
+}
+.products ul{
+    list-style: none;
+    display: flex;
+    width: 100vw;
+    gap: 1rem;
+}
