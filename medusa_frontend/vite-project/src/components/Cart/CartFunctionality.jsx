@@ -17,32 +17,34 @@ const Cart = ({ product, variant }) => {
         handleCreateCart(); // Kald handleCreateCart, når komponenten først monteres
     }, []);
 
-    const handleCreateCart = () => {
-        // Kontroller om der allerede er en vogn
-        if (!cart.id && !contextCart) {
-            createCart.mutate(
-                {}, 
-                {
-                    onSuccess: ({ cart }) => {
-                        console.log('Ny vogn oprettet!');
-                        localStorage.setItem("cart_id", cart.id);
-                        // Gem kurvtilstanden i contextCart
-                        setContextCart(cart);
-                    },
-                }
-            );
-        } else {
-            console.log('Vogn eksisterer allerede!');
-        }
+const handleCreateCart = () => {
+    // Kontroller om der allerede er en vogn
+    if (!cart.id && !contextCart) {
+        createCart.mutate(
+            {}, 
+            {
+                onSuccess: ({ cart }) => {
+                    console.log('Ny vogn oprettet!');
+                    localStorage.setItem("cart_id", cart.id);
+                    // Gem kurvtilstanden i contextCart
+                    setContextCart(cart);
+                },
+            }
+        );
+    } else {
+        console.log('Vogn eksisterer allerede!');
     }
-    
+}
+
 
     const handleAddItem = (variants, quantity) => {
         const variant_id = variants.id;
+
         createLineItem.mutate(
             {
                 variant_id: variant_id,
                 quantity,
+                
             }, 
             {
                 onSuccess: ({ cart }) => {

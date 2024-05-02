@@ -28,7 +28,7 @@ const Products = () => {
               })}
             </p>
             {/* Send product som prop til Cart */}
-            <Cart product={product} variant={product.variants[0]} />
+            <Cart product={product} variant={product.variants[0]} price={regions[0]} />
           </li>
         ))}
       </ul>
