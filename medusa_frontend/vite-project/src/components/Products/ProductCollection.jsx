@@ -8,7 +8,7 @@ const Products = () => {
   const { regions, isLoading: isRegionsLoading } = useRegions();
 
   if (isLoading || isRegionsLoading) return <p>is loading...</p>;
-  console.log(products[0].variants[0]);
+
   return (
     <div className={style.products}>
       <h1>Our picks for you</h1>

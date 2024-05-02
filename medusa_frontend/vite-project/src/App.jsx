@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {Frontpage} from "./pages/Frontpage"
 import Productpage from './pages/Productpage'
 import {Layout} from './Layout/Layout'
+import TheCart from './components/Cart/TheCart'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Layout/>}>
         <Route path='/home' element={<Frontpage/>}/>
         <Route path='/products' element={<Productpage/>}/>
+        <Route path='/cart' element={<TheCart/>}/>
         <Route path='/*' element={<h1>page doesn't exist</h1>}/>
         </Route>
       </Routes>

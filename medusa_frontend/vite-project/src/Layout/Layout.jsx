@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link, Outlet} from "react-router-dom"
-import Cart from '../components/Cart/CartFunctionality'
+
+
 
 
 
@@ -10,8 +11,9 @@ export const Layout = () => {
       <nav><ul>
         <li><Link to="/home">home</Link></li>
         <li><Link to="/products">products</Link></li>
+        <li><Link to="/cart">cart</Link></li>
         </ul></nav>
-        <Cart></Cart>
+       
         <Outlet />
 
       <footer>footer</footer>
