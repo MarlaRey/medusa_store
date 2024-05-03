@@ -1,24 +1,30 @@
-import React from 'react'
-import {Link, Outlet} from "react-router-dom"
-
-
-
-
+import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa'; // Importer FaShoppingCart fra react-icons
+import styles from './Layout.module.scss'; // Importer SCSS-filen
 
 export const Layout = () => {
-  return (
-    <div>
-      <nav><ul>
-        <li><Link to="/home">home</Link></li>
-        <li><Link to="/products">products</Link></li>
-        <li><Link to="/cart">cart</Link></li>
-        </ul></nav>
-       
-        <Outlet />
+  return (<>
+    <div className={styles.navbar}>
+      <div>
+        <Link to="/home">
+          home
+        </Link>
+      </div>
+      <nav>
+        <ul>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/products">Products</Link></li>
+          <li><Link to="/cart">Cart</Link></li>
+        </ul>
+      </nav>
+      <div className={styles.icons}>
+        <img src={FaShoppingCart} alt="Shopping Cart" /> {/* Brug FaShoppingCart som billedkilde */}
+      </div>
 
-      <footer>footer</footer>
     </div>
-  )
-}
-
-
+          <Outlet />
+          <footer>footer</footer>
+          </>
+  );
+};

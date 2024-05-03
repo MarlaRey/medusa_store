@@ -49,6 +49,7 @@ const Cart = ({ product, variant }) => {
                     setCart(cart);
                     setContextCart(cart);
                     setShowModal(true); // Vis modalen når produktet tilføjes til kurven
+                    setTimeout(() => setShowModal(false), 2000); // Luk modalen efter 2 sekunder
                 }
             }
         );

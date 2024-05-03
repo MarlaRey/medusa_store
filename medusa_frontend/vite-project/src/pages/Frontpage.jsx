@@ -1,26 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import HeaderBanner from "../components/HeaderBanner/HeaderBanner";
 
 export const Frontpage = () => {
-  const [dogImage, setDogImage] = useState(null);
-
-  useEffect(() => {
-    const fetchDogImage = async () => {
-      try {
-        const response = await fetch("https://dog.ceo/api/breeds/image/random");
-        const data = await response.json();
-        setDogImage(data.message);
-      } catch (error) {
-        console.error("Error fetching dog image:", error);
-      }
-    };
-
-    fetchDogImage();
-  }, []);
 
   return (
     <div>
-      <h1>Velkommen til hund:</h1>
-      {dogImage && <img src={dogImage} alt="Random dog" />}
+ <HeaderBanner text="We love coffee And all the people who make it" />
     </div>
   );
 };
