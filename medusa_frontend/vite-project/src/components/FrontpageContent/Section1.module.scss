@@ -1,4 +1,4 @@
-section{
+.section1{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     gap: 1rem;
@@ -12,13 +12,14 @@ section{
     p{
         padding: 2rem;
         font-size: 0.8rem;
-        min-height: 220px;
+        min-height: 180px;
        
     }
 img{
     width: 100%;
     object-fit: cover;
-    height: 200px;
+    height: 300px;
     display: block;
     margin: auto;
+    margin-bottom: 2rem;
 }}

@@ -1,10 +1,16 @@
 .products{
 
-h4{
+h2{
     text-align: center;
-    font-size: 40px;
+    font-size: 70px;
     margin-top:1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+h3{
+    text-align: center;
+    font-size: 2rem
+
+
 }
 section{
     display: grid;
@@ -12,16 +18,33 @@ section{
     gap: 1rem;
     width: 80vw;
     margin: auto;
+    
     li{
         list-style: none;
     }
+    p:first-of-type{
+        min-height: 250px;
+        padding: 1rem 0;
+    }
 }
-}
-
-section img{
+img{
     width: 100%;
     object-fit: cover;
     height: 300px;
     display: block;
-    margin: auto;
+    margin:  auto;
 }
+button{
+    background-color: black;
+    padding: 1rem;
+    border: none;
+    width: 100%;
+    color: #fff;
+    margin-top: 1rem;
+&:hover{
+    background-color: rgba(0, 0, 0, 0.929);
+    cursor: pointer;
+}
+}
+}
+

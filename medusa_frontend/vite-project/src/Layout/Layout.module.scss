@@ -49,7 +49,7 @@ display: flex;
     .logoBackground {
         position: absolute;
         width: 10%;
-        top: 1rem;
+        top: 0rem;
         left: 50%;
         transform: translateX(-50%);
         z-index: 1000;
@@ -58,7 +58,7 @@ display: flex;
     .logo {
         position: absolute;
         width: 4%;
-        top: 4rem;
+        top: 5rem;
         left: 50%;
         transform: translateX(-50%);
         z-index: 1100;
@@ -68,7 +68,7 @@ display: flex;
     .logoText {
         position: absolute;
         width: 8%;
-        top: 2rem;
+        top: 2.5rem;
         left: 50%;
         transform: translateX(-50%);
         z-index: 1100;

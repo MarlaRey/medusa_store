@@ -5,7 +5,7 @@ import style from "./Section1.module.scss";
 export const Section1 = () => {
     return (
         <div>
-            <section>
+            <section className={style.section1}>
                 <div>
                     <h2>The right beans</h2>
                     <p>Our journey begins with a deep-rooted connection to the land, as we seek out farmers who uphold environmentally-friendly practices and prioritize the well-being of their communities. Through personal relationships and mutual respect, we collaborate closely with these farmers, understanding their methods and values.</p>
