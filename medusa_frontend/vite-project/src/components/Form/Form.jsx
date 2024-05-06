@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const FormComponent = ({ onSubmit }) => {
-  // Tilstande for formularværdier og fejl
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -14,7 +13,6 @@ const FormComponent = ({ onSubmit }) => {
 
   const [formErrors, setFormErrors] = useState({});
 
-  // Funktion til opdatering af formularværdier
   const handleFormChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -23,18 +21,17 @@ const FormComponent = ({ onSubmit }) => {
     });
   };
 
-  // Funktion til validering af formular
   const validateForm = () => {
     let errors = {};
-    if (!formData.firstname.trim()) {
-      errors.firstname = 'Fornavn skal udfyldes';
-    }
-    // Tilføj validering for de andre felter efter behov
+    Object.keys(formData).forEach(key => {
+      if (!formData[key].trim()) {
+        errors[key] = `${key.charAt(0).toUpperCase() + key.slice(1)} skal udfyldes`;
+      }
+    });
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
 
-  // Funktion til afsendelse af formular
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
@@ -44,17 +41,18 @@ const FormComponent = ({ onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label>Fornavn:</label>
-        <input
-          type="text"
-          name="firstname"
-          value={formData.firstname}
-          onChange={handleFormChange}
-        />
-        {formErrors.firstname && <p className="error">{formErrors.firstname}</p>}
-      </div>
-      {/* Tilføj resten af inputfelterne her */}
+      {Object.keys(formData).map(key => (
+        <div key={key}>
+          <label>{key.charAt(0).toUpperCase() + key.slice(1)}:</label>
+          <input
+            type="text"
+            name={key}
+            value={formData[key]}
+            onChange={handleFormChange}
+          />
+          {formErrors[key] && <p className="error">{formErrors[key]}</p>}
+        </div>
+      ))}
       <button type="submit">Gem</button>
     </form>
   );

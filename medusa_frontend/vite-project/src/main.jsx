@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
 import { CartProvider, MedusaProvider } from 'medusa-react'
 import { QueryClient } from '@tanstack/react-query'
 import { StoreContextProvider } from './components/context/StoreContext.jsx'

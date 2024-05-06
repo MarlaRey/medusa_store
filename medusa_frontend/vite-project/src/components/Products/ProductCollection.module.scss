@@ -5,6 +5,7 @@ h2{
     font-size: 70px;
     margin-top:1rem;
     margin-bottom: 2rem;
+    font-weight: 100;
 }
 h3{
     text-align: center;
@@ -22,8 +23,8 @@ section{
     li{
         list-style: none;
     }
-    p:first-of-type{
-        min-height: 250px;
+    .description{
+        min-height: 230px;
         padding: 1rem 0;
     }
 }
@@ -35,6 +36,7 @@ img{
     margin:  auto;
 }
 button{
+    z-index: 900;
     background-color: black;
     padding: 1rem;
     border: none;

@@ -19,7 +19,7 @@ const Products = () => {
             {product.images.length > 0 && (
               <img src={product.images[0].url} alt={product.title} />
             )}
-            <p>{product.description}</p>
+            <p className={style.description}>{product.description}</p>
             <p>{product.price}</p>
             <p>Price: 
               {formatVariantPrice({

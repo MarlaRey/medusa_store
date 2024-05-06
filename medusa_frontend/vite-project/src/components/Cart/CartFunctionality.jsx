@@ -5,6 +5,7 @@ import { StoreContext } from '../context/StoreContext';
 import Products from '../Products/ProductCollection';
 import CartModal from './CartModal'; // Importer CartModal
 
+
 const Cart = ({ product, variant }) => {
     const { cart, createCart } = useCart();
     const { cart: cart2, setCart } = useCart();
@@ -55,9 +56,6 @@ const Cart = ({ product, variant }) => {
         );
     }
 
-    const closeModal = () => {
-        setShowModal(false); // Luk modalen
-    };
 
     const goToCart = () => {
         // Gå til kurvens side
@@ -68,8 +66,8 @@ const Cart = ({ product, variant }) => {
         <div>
       
             <button onClick={()=> handleAddItem(product.variants[0],1)}>Add to cart</button>
-            {/* Vis modalen, hvis showModal er sand */}
-            {showModal && <CartModal productName={product.title} closeModal={closeModal} goToCart={goToCart} />}
+    <div>
+            {showModal && <CartModal productName={product.title}  goToCart={goToCart} />}</div>
         </div>
     );
 };

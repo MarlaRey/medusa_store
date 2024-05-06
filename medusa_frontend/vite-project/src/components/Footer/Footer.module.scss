@@ -1,7 +1,9 @@
 .footerContainerSuper{
+    position:static;
     width: 100%;
     background-color: black;
     margin-top: 2rem;
+    bottom: 0;
 }
 .footerContainer{
     display: grid;

@@ -46,31 +46,35 @@ const TheCart = () => {
 
   return (
 
-    <div className={styles.cartContainer}>
-      <h1>Shopping Cart</h1>
+    <div className={styles.cartpageContainer} >
+      <h2>Checkout</h2>
+      <div className={styles.cartContainer}>
       <section className={styles.formularContainer}>
       <FormComponent  />
       </section>
       <ul>
         {cart.items.map(item => (
           <li key={item.id}>
-            <span>Produkt: {item.title}</span>
-            <span>Antal:
+            <span>{item.title}</span>
+            <span className={styles.quantity}>Antal:
               <input
                 type="number"
                 value={item.quantity}
                 onChange={(e) => handleUpdateQuantity(item.id, parseInt(e.target.value))}
               />
             </span>
-            <span>Pris pr stk: {item.unit_price}</span>
-            <span>Samlet pris: {item.subtotal}</span>
+            <span>Pris pr stk: {item.unit_price}DKK</span>
+            <span>Ialt {item.subtotal} DKK</span>
             <button onClick={() => handleRemoveItem(item.id)}>Fjern</button>
+            
           </li>
+          
         ))}
+        <h4><span>Din samlede pris:</span> {total} DKK </h4>
       </ul>
-      <h1>Din samlede pris: {total}</h1>
+      
     </div>
-
+    </div>
   );
 };
 
