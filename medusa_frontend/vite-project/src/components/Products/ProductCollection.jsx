@@ -11,8 +11,8 @@ const Products = () => {
 
   return (
     <div className={style.products}>
-      <h1>Our picks for you</h1>
-      <ul>
+      <h4>Our picks for you</h4>
+      <section>
         {products.map((product) => (
           <li key={product.id}>
             <h2>{product.title}</h2>
@@ -31,7 +31,7 @@ const Products = () => {
             <Cart product={product} variant={product.variants[0]} price={regions[0]} />
           </li>
         ))}
-      </ul>
+      </section>
     </div>
   );
 };

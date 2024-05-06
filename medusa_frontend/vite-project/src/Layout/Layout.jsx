@@ -5,6 +5,9 @@ import styles from './Layout.module.scss';
 import logoImage from "../assets/img/logo/Coffee.png";
 import logobg from "../assets/img/logo/Ellipse 1.png";
 import logoText from "../assets/img/logo/Sunshine Coffee.png";
+import { Footer } from '../components/Footer/Footer';
+
+//lav nav og logoContainer i egne komponenter
 
 export const Layout = () => {
   return (
@@ -17,22 +20,23 @@ export const Layout = () => {
             <li><Link to="/cart">Cart</Link></li>
           </ul>
         </nav>
-        <div className={styles.logoContainer}>
+
+        <div className={styles.icons}>
+        <Link to="/cart"><FaShoppingCart /></Link>
+        </div>
+        
+      </div>
+      <div className={styles.logoContainer}>
           <Link to="/home">
           <img src={logoText} alt="Logo" className={styles.logoText} />
             <img src={logobg} alt="Logo Background" className={styles.logoBackground} />
             <img src={logoImage} alt="Logo" className={styles.logo} />
           </Link>
         </div>
-        <div className={styles.icons}>
-          <FaShoppingCart />
-        </div>
-      </div>
-     
       <div className={styles.outletContainer}>
         <Outlet />
       </div>
-      <footer>footer</footer>
+      <Footer/>
     </>
   );
 };

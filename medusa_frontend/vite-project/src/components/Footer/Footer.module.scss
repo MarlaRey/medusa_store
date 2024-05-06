@@ -1,0 +1,27 @@
+.footerContainerSuper{
+    width: 100%;
+    background-color: black;
+    margin-top: 2rem;
+}
+.footerContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 1rem;
+    width: 80vw;
+    margin:auto;
+    padding-top: 2rem;
+h2{
+    color: #fff
+    ;
+}
+p{
+    color: #fff;
+}
+ul{
+    list-style: none;
+
+    li{
+        color: #fff;
+    }
+}
+}

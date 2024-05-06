@@ -7,7 +7,8 @@ const HeaderBanner = ({ text }) => {
     <div className={styles.headerBanner}>
       <img src={bannerImage} alt="Header Banner" className={styles.bannerImage} />
       <div className={styles.headerText}>
-        <h1>{text}</h1>
+        <h1>We love coffee <br />
+  And all the people who make it</h1>
       </div>
     </div>
   );

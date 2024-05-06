@@ -1,17 +1,27 @@
 .products{
-width: 100vw;
+
+h4{
+    text-align: center;
+    font-size: 40px;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 1rem;
+    width: 80vw;
+    margin: auto;
+    li{
+        list-style: none;
+    }
+}
 }
 
-ul img{
+section img{
     width: 100%;
     object-fit: cover;
-    height: 30%;
+    height: 300px;
     display: block;
     margin: auto;
-}
-.products ul{
-    list-style: none;
-    display: flex;
-    width: 100vw;
-    gap: 1rem;
 }

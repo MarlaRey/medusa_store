@@ -12,7 +12,7 @@ const Productpage = () => {
 
   return (
     <>
-     <HeaderBanner text="We love coffee And so do you" />
+     <HeaderBanner/>
 
       {<Products/>}
 

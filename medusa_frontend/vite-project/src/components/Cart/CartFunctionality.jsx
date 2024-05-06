@@ -66,7 +66,7 @@ const Cart = ({ product, variant }) => {
 
     return (
         <div>
-            <h3>Cart</h3>
+      
             <button onClick={()=> handleAddItem(product.variants[0],1)}>Add to cart</button>
             {/* Vis modalen, hvis showModal er sand */}
             {showModal && <CartModal productName={product.title} closeModal={closeModal} goToCart={goToCart} />}
