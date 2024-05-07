@@ -18,7 +18,7 @@ function App() {
         <Route path='/home' element={<Frontpage/>}/>
         <Route path='/products' element={<Productpage/>}/>
         <Route path='/cart' element={<Cartpage/>}/>
-        <Route path='/*' element={<h1>page doesn't exist</h1>}/>
+        <Route path='/*' element={<Frontpage/>}/> {/* Dette viser Frontpage når roden en ukendt sti er besøgt */}
         </Route>
       </Routes>
     </Router>
