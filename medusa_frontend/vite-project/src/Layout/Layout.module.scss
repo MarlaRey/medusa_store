@@ -50,6 +50,9 @@
 .logoContainer {
     display: flex;
     z-index: 2000;
+    @media  (max-width: 1000px) {
+        display:none;
+    }
 
     .logoBackground {
         position: absolute;

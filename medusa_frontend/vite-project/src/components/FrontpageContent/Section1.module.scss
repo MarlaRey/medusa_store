@@ -24,4 +24,7 @@
         margin: auto;
         margin-bottom: 2rem;
     }
+    @media  (max-width: 1000px) {
+        grid-template-columns: 1fr;
+    }
 }
