@@ -6,7 +6,7 @@ import { Section1 } from "../components/FrontpageContent/Section1";
 export const Frontpage = () => {
   return (
     <div>
-      <HeaderBanner />
+      <HeaderBanner/>
       <Section1/>
 
     </div>

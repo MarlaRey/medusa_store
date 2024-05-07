@@ -1,25 +1,27 @@
-.section1{
+.section1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     width: 80vw;
     margin: auto;
     text-align: center;
-    h2{
+
+    h2 {
         margin-top: 2rem;
         font-size: 2rem;
     }
-    p{
-        padding: 2rem;
 
+    p {
+        padding: 2rem;
         min-height: 190px;
-       
     }
-img{
-    width: 100%;
-    object-fit: cover;
-    height: 300px;
-    display: block;
-    margin: auto;
-    margin-bottom: 2rem;
-}}
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+        display: block;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+}

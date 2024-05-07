@@ -8,7 +8,7 @@ import logoText from "../assets/img/logo/Sunshine Coffee.png";
 import { Footer } from '../components/Footer/Footer';
 import { CookieBanner } from '../components/cookieBanner/CookieBanner';
 
-//lav nav og logoContainer i egne komponenter
+//Note to self: lav nav og logoContainer i egne komponenter hvis tiden er til det
 
 export const Layout = () => {
   return (
