@@ -1,8 +1,15 @@
-# React + Vite
+En lille storefront løsning til et firma der sælger fair-trade kvalitetskaffe. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Jeg har fulgt et udleveret design.
 
-Currently, two official plugins are available:
+Jeg har brugt Medusa Ecommerce som mit datagrundlag.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dette er lavet:
+Frontend løsningen er skrevet i React
+Der er tre produkter på produktsiden
+Der er en forside, en produkt side og en checkout side
+Det er muligt at gå til checkout, samt udfylde en formular med de påkrævede felter
+Det er muligt at tilføje produkter til kurven
+Der er en cookie accept banner på siden
+Bonus:
+Det er muligt at redigere antal, samt fjerne produkter fra kurven
