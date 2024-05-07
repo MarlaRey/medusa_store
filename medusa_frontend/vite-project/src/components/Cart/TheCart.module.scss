@@ -13,6 +13,7 @@
         span {
             font-family: "Licorice", cursive;
             font-size: 2rem;
+            font-weight: 100;
         }
 
         margin-top: 2rem;
@@ -34,7 +35,7 @@
             justify-content: space-evenly;
             list-style: none;
             padding: 2rem 0;
-            border-bottom: 0.1px solid black;
+            border-bottom: 0.1px solid #1E1E1E;
 
   
 button{
@@ -66,7 +67,7 @@ padding: 0.5rem;
         width: 90%;
         padding: 1rem;
         border-radius: 5px;
-        border: 0.1px black solid;
+        border: 0.1px #1E1E1E solid;
     }
 
     button {

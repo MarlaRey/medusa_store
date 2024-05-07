@@ -1,0 +1,26 @@
+.cookieBanner {
+    padding-top: 2rem;
+text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 30vh;
+    background-color: #B46538;
+    color: white;
+  
+    p {
+      padding: 1rem;
+    }
+    button{
+        background-color: #1E1E1E;
+        padding: 1rem;
+        border: none;
+        width: 200px;
+        color: #EFEFEF;
+        margin: 1rem;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.929);
+        cursor: pointer;
+    }
+    }
+  }

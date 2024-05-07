@@ -70,7 +70,7 @@ const TheCart = () => {
           </li>
           
         ))}
-        <h4><span>Din samlede pris:</span> {total} DKK </h4>
+        <h4><span>Din samlede pris: </span> {total} DKK </h4>
       </ul>
       
     </div>

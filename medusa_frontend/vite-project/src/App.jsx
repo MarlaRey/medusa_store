@@ -5,15 +5,16 @@ import Productpage from './pages/Productpage'
 import {Layout} from './Layout/Layout'
 import { Cartpage } from './pages/Cartpage'
 import styles from "./App.module.scss";
-
+import ReactGA from "react-ga4";
 
 
 function App() {
-
+  ReactGA.initialize("G-DNP3DQLWZ3");
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Layout/>}>
+        <Route index element={<Frontpage />} /> {/* Dette viser Frontpage når roden '/' er besøgt */}
         <Route path='/home' element={<Frontpage/>}/>
         <Route path='/products' element={<Productpage/>}/>
         <Route path='/cart' element={<Cartpage/>}/>

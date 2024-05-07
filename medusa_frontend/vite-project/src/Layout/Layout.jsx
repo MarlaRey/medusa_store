@@ -6,12 +6,14 @@ import logoImage from "../assets/img/logo/Coffee.png";
 import logobg from "../assets/img/logo/Ellipse 1.png";
 import logoText from "../assets/img/logo/Sunshine Coffee.png";
 import { Footer } from '../components/Footer/Footer';
+import { CookieBanner } from '../components/cookieBanner/CookieBanner';
 
 //lav nav og logoContainer i egne komponenter
 
 export const Layout = () => {
   return (
     <>
+    <div className={styles.navbarParent}>
       <div className={styles.navbar}>
         <nav>
           <ul>
@@ -26,6 +28,7 @@ export const Layout = () => {
         </div>
         
       </div>
+      </div>
       <div className={styles.logoContainer}>
           <Link to="/home">
           <img src={logoText} alt="Logo" className={styles.logoText} />
@@ -36,6 +39,7 @@ export const Layout = () => {
       <div className={styles.outletContainer}>
         <Outlet />
       </div>
+      <CookieBanner /> 
       <Footer/>
     </>
   );

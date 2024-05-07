@@ -1,12 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useCart, useCreateLineItem } from 'medusa-react';
-import { formatVariantPrice, useProducts, useRegions } from "medusa-react";
 import { StoreContext } from '../context/StoreContext'; 
-import Products from '../Products/ProductCollection';
 import CartModal from './CartModal'; // Importer CartModal
 
 
-const Cart = ({ product, variant }) => {
+const Cart = ({ product, variant, formattedPrice }) => {
     const { cart, createCart } = useCart();
     const { cart: cart2, setCart } = useCart();
     const { cart: contextCart, setCart: setContextCart } = useContext(StoreContext); 
@@ -50,7 +48,7 @@ const Cart = ({ product, variant }) => {
                     setCart(cart);
                     setContextCart(cart);
                     setShowModal(true); // Vis modalen når produktet tilføjes til kurven
-                    setTimeout(() => setShowModal(false), 2000); // Luk modalen efter 2 sekunder
+                    setTimeout(() => setShowModal(false), 3000); // Luk modalen efter 2 sekunder
                 }
             }
         );
