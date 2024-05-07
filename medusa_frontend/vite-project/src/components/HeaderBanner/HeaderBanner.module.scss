@@ -2,6 +2,9 @@
     height: 98vh;
     top: 0;
     position: relative;
+    @media  (max-width: 1000px) {
+      height: 50vh;
+  }
   }
   
   .bannerImage {
@@ -17,9 +20,17 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+          @media  (max-width: 900px) {
+        top: 70%;
+    }
+    
     h1 {
       font-size: 6rem;
       font-weight: 100;
+      @media  (max-width: 900px) {
+        font-size: 3rem;
     }
+    }
+
   }
   
